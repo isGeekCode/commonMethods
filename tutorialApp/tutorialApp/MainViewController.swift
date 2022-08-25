@@ -40,10 +40,14 @@ class MainViewController: UIViewController {
     
     @objc func buttonBtnTapped(_ sender: UIButton) {
         print("ButtonVcBtn")
+        let buttonVC = ButtonViewController()
+        buttonVC.modalPresentationStyle = .fullScreen
+        present(buttonVC, animated: true, completion: nil)
     }
     func setDetail() {
         ButtonVcBtn.addTarget(self, action: #selector(buttonBtnTapped(_:)), for: .touchUpInside)
     }
+    
     
     func setLayout() {
         // 2 - constraints 주기 전, subView에 추가
