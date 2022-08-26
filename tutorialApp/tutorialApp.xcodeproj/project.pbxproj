@@ -16,6 +16,7 @@
 		9632BBE628ADC428006D32C9 /* CommonMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBE528ADC428006D32C9 /* CommonMethod.swift */; };
 		9632BBE828ADC467006D32C9 /* CommonInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBE728ADC467006D32C9 /* CommonInstance.swift */; };
 		964E8BF028B83F8400A124C9 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */; };
+		964E8BF228B84A0B00A124C9 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E8BF128B84A0B00A124C9 /* ViewViewController.swift */; };
 		968117C728B4571300BC59FD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 968117C628B4571300BC59FD /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		9632BBE528ADC428006D32C9 /* CommonMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethod.swift; sourceTree = "<group>"; };
 		9632BBE728ADC467006D32C9 /* CommonInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInstance.swift; sourceTree = "<group>"; };
 		964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		964E8BF128B84A0B00A124C9 /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				9632BBD128ADC39C006D32C9 /* AppDelegate.swift */,
 				9632BBD328ADC39C006D32C9 /* SceneDelegate.swift */,
 				9632BBD528ADC39C006D32C9 /* MainViewController.swift */,
+				964E8BF128B84A0B00A124C9 /* ViewViewController.swift */,
 				964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */,
 				9632BBE528ADC428006D32C9 /* CommonMethod.swift */,
 				9632BBE728ADC467006D32C9 /* CommonInstance.swift */,
@@ -161,6 +164,7 @@
 				9632BBD428ADC39C006D32C9 /* SceneDelegate.swift in Sources */,
 				964E8BF028B83F8400A124C9 /* ButtonViewController.swift in Sources */,
 				9632BBE628ADC428006D32C9 /* CommonMethod.swift in Sources */,
+				964E8BF228B84A0B00A124C9 /* ViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

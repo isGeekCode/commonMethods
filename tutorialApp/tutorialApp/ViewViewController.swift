@@ -1,5 +1,5 @@
 //
-//  ButtonViewController.swift
+//  ViewViewController.swift
 //  tutorialApp
 //
 //  Created by bang_hyeonseok on 2022/08/26.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ButtonViewController: UIViewController {
-    
+class ViewViewController: UIViewController {
+
     private lazy var bView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemYellow
@@ -66,3 +66,4 @@ class ButtonViewController: UIViewController {
 
 
 }
+
