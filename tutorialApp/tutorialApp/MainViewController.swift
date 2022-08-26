@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
     
     func setLayout() {
         view.addSubview(bView)
-        [label, buttonVcBtn].forEach {
+        [ label, buttonVcBtn ].forEach {
             bView.addSubview($0)
         }
         

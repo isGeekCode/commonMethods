@@ -9,6 +9,21 @@ import UIKit
 
 class ButtonViewController: UIViewController {
     
+    private lazy var bView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemYellow
+
+        return view
+    }()
+    
+    private let closeButton: UIButton = {
+        let btn = UIButton()
+        let imageConfigure = UIImage.SymbolConfiguration(scale: .large)
+        let closeImage = UIImage(systemName: "xmark", withConfiguration: imageConfigure)?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        btn.setImage(closeImage, for: .normal)
+        
+        return btn
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,33 +34,35 @@ class ButtonViewController: UIViewController {
     @objc func buttonBtnTapped(_ sender: UIButton) {
         print("ButtonVcBtn")
     }
-    func setDetail() {
-        self.view.backgroundColor = .white
-        //        ButtonVcBtn.addTarget(self, action: #selector(buttonBtnTapped(_:)), for: .touchUpInside)
+    
+    @objc func closeBtnTapped(_ sender: UIButton) {
+        print("closeBtn")
+        dismiss(animated: true, completion: nil)
     }
     
+    func setDetail() {
+        self.view.backgroundColor = .white
+        closeButton.addTarget(self, action: #selector(closeBtnTapped), for: .touchUpInside)
+    }
     
     func setLayout() {
+
         // 2 - constraints 주기 전, subView에 추가
-//        [bView, label, ButtonVcBtn].forEach {
-//            view.addSubview($0)
-//        }
-//
+        view.addSubview(bView)
+        [ closeButton ].forEach {
+            bView.addSubview($0)
+        }
+        
+        
 //        // 3 - constraints 추가
-//        bView.snp.makeConstraints {
-//            $0.edges.equalToSuperview()
-//        }
-//
-//        label.snp.makeConstraints {
-//            $0.centerX.centerY.equalToSuperview()
-//        }
-//
-//        ButtonVcBtn.snp.makeConstraints {
-//            $0.centerX.equalToSuperview()
-//            $0.top.equalTo(label.snp.bottom).offset(30)
-//            $0.width.equalTo(label).multipliedBy(1.5)
-//            $0.height.equalTo(label.snp.width).multipliedBy(0.6)
-//        }
+        bView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+
+        closeButton.snp.makeConstraints {
+            $0.top.right.equalToSuperview().inset(50)
+        }
+
     }
 
 
