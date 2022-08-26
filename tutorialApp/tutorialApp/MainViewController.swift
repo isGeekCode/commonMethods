@@ -24,11 +24,12 @@ class MainViewController: UIViewController {
         return label
     }()
     
-    private lazy var ButtonVcBtn: UIButton = {
+    private lazy var buttonVcBtn: UIButton = {
         let button = UIButton()
         button.backgroundColor =  .systemYellow
         button.setTitle("Button", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        
         return button
     }()
     
@@ -44,15 +45,15 @@ class MainViewController: UIViewController {
         buttonVC.modalPresentationStyle = .fullScreen
         present(buttonVC, animated: true, completion: nil)
     }
+    
     func setDetail() {
-        ButtonVcBtn.addTarget(self, action: #selector(buttonBtnTapped(_:)), for: .touchUpInside)
+        buttonVcBtn.addTarget(self, action: #selector(buttonBtnTapped(_:)), for: .touchUpInside)
     }
     
-    
     func setLayout() {
-        // 2 - constraints 주기 전, subView에 추가
-        [bView, label, ButtonVcBtn].forEach {
-            view.addSubview($0)
+        view.addSubview(bView)
+        [label, buttonVcBtn].forEach {
+            bView.addSubview($0)
         }
         
         // 3 - constraints 추가
@@ -64,7 +65,7 @@ class MainViewController: UIViewController {
             $0.centerX.centerY.equalToSuperview()
         }
         
-        ButtonVcBtn.snp.makeConstraints {
+        buttonVcBtn.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(label.snp.bottom).offset(30)
             $0.width.equalTo(label).multipliedBy(1.5)
