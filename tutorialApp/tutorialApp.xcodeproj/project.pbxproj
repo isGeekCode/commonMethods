@@ -70,9 +70,9 @@
 			children = (
 				9632BBD128ADC39C006D32C9 /* AppDelegate.swift */,
 				9632BBD328ADC39C006D32C9 /* SceneDelegate.swift */,
+				964AF7C428F4EAC300A4FDED /* BaseViewController.swift */,
 				9632BBD528ADC39C006D32C9 /* MainViewController.swift */,
 				964E8BF128B84A0B00A124C9 /* ViewViewController.swift */,
-				964AF7C428F4EAC300A4FDED /* BaseViewController.swift */,
 				964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */,
 				9632BBE528ADC428006D32C9 /* CommonMethod.swift */,
 				9632BBE728ADC467006D32C9 /* CommonInstance.swift */,

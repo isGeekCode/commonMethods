@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ViewViewController: UIViewController {
+class ViewViewController: BaseViewController {
 
+    // MARK: - Properties
+    
     private lazy var bView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemYellow
 
         return view
     }()
@@ -25,12 +26,42 @@ class ViewViewController: UIViewController {
         return btn
     }()
     
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLayout()
-        setDetail()
+    }
+
+    // MARK: - Setup
+    
+    override func setupLayouts() {
+        view.addSubview(bView)
+        [ closeButton ].forEach {
+            bView.addSubview($0)
+        }
+    }
+
+    override func setupStyles() {
+        self.view.backgroundColor = .white
+        view.backgroundColor = .systemYellow
+
     }
     
+    override func setupConstraints() {
+        bView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+
+        closeButton.snp.makeConstraints {
+            $0.top.right.equalToSuperview().inset(50)
+        }
+    }
+    
+    override func bind() {
+        closeButton.addTarget(self, action: #selector(closeBtnTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - Functions
     @objc func buttonBtnTapped(_ sender: UIButton) {
         print("ButtonVcBtn")
     }
@@ -39,31 +70,6 @@ class ViewViewController: UIViewController {
         print("closeBtn")
         dismiss(animated: true, completion: nil)
     }
-    
-    func setDetail() {
-        self.view.backgroundColor = .white
-        closeButton.addTarget(self, action: #selector(closeBtnTapped), for: .touchUpInside)
-    }
-    
-    func setLayout() {
-
-        // 2 - constraints 주기 전, subView에 추가
-        view.addSubview(bView)
-        [ closeButton ].forEach {
-            bView.addSubview($0)
-        }
-        
-        // 3 - constraints 추가
-        bView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-
-        closeButton.snp.makeConstraints {
-            $0.top.right.equalToSuperview().inset(50)
-        }
-
-    }
-
 
 }
 
