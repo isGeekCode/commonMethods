@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		9632BBD228ADC39C006D32C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBD128ADC39C006D32C9 /* AppDelegate.swift */; };
 		9632BBD428ADC39C006D32C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBD328ADC39C006D32C9 /* SceneDelegate.swift */; };
-		9632BBD628ADC39C006D32C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBD528ADC39C006D32C9 /* MainViewController.swift */; };
+		9632BBD628ADC39C006D32C9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBD528ADC39C006D32C9 /* MainVC.swift */; };
 		9632BBD928ADC39C006D32C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9632BBD728ADC39C006D32C9 /* Main.storyboard */; };
 		9632BBDB28ADC39E006D32C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9632BBDA28ADC39E006D32C9 /* Assets.xcassets */; };
 		9632BBDE28ADC39E006D32C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9632BBDC28ADC39E006D32C9 /* LaunchScreen.storyboard */; };
 		9632BBE628ADC428006D32C9 /* CommonMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBE528ADC428006D32C9 /* CommonMethod.swift */; };
 		9632BBE828ADC467006D32C9 /* CommonInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632BBE728ADC467006D32C9 /* CommonInstance.swift */; };
 		964AF7C528F4EAC300A4FDED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964AF7C428F4EAC300A4FDED /* BaseViewController.swift */; };
-		964E8BF028B83F8400A124C9 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */; };
-		964E8BF228B84A0B00A124C9 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E8BF128B84A0B00A124C9 /* ViewViewController.swift */; };
+		964E8BF028B83F8400A124C9 /* ButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E8BEF28B83F8400A124C9 /* ButtonVC.swift */; };
+		964E8BF228B84A0B00A124C9 /* ViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E8BF128B84A0B00A124C9 /* ViewVC.swift */; };
 		968117C728B4571300BC59FD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 968117C628B4571300BC59FD /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 		9632BBCE28ADC39C006D32C9 /* tutorialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9632BBD128ADC39C006D32C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9632BBD328ADC39C006D32C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9632BBD528ADC39C006D32C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9632BBD528ADC39C006D32C9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		9632BBD828ADC39C006D32C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9632BBDA28ADC39E006D32C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9632BBDD28ADC39E006D32C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,8 +33,8 @@
 		9632BBE528ADC428006D32C9 /* CommonMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethod.swift; sourceTree = "<group>"; };
 		9632BBE728ADC467006D32C9 /* CommonInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInstance.swift; sourceTree = "<group>"; };
 		964AF7C428F4EAC300A4FDED /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
-		964E8BF128B84A0B00A124C9 /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
+		964E8BEF28B83F8400A124C9 /* ButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonVC.swift; sourceTree = "<group>"; };
+		964E8BF128B84A0B00A124C9 /* ViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +71,9 @@
 				9632BBD128ADC39C006D32C9 /* AppDelegate.swift */,
 				9632BBD328ADC39C006D32C9 /* SceneDelegate.swift */,
 				964AF7C428F4EAC300A4FDED /* BaseViewController.swift */,
-				9632BBD528ADC39C006D32C9 /* MainViewController.swift */,
-				964E8BF128B84A0B00A124C9 /* ViewViewController.swift */,
-				964E8BEF28B83F8400A124C9 /* ButtonViewController.swift */,
+				9632BBD528ADC39C006D32C9 /* MainVC.swift */,
+				964E8BF128B84A0B00A124C9 /* ViewVC.swift */,
+				964E8BEF28B83F8400A124C9 /* ButtonVC.swift */,
 				9632BBE528ADC428006D32C9 /* CommonMethod.swift */,
 				9632BBE728ADC467006D32C9 /* CommonInstance.swift */,
 				9632BBD728ADC39C006D32C9 /* Main.storyboard */,
@@ -162,13 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9632BBE828ADC467006D32C9 /* CommonInstance.swift in Sources */,
-				9632BBD628ADC39C006D32C9 /* MainViewController.swift in Sources */,
+				9632BBD628ADC39C006D32C9 /* MainVC.swift in Sources */,
 				9632BBD228ADC39C006D32C9 /* AppDelegate.swift in Sources */,
 				9632BBD428ADC39C006D32C9 /* SceneDelegate.swift in Sources */,
-				964E8BF028B83F8400A124C9 /* ButtonViewController.swift in Sources */,
+				964E8BF028B83F8400A124C9 /* ButtonVC.swift in Sources */,
 				964AF7C528F4EAC300A4FDED /* BaseViewController.swift in Sources */,
 				9632BBE628ADC428006D32C9 /* CommonMethod.swift in Sources */,
-				964E8BF228B84A0B00A124C9 /* ViewViewController.swift in Sources */,
+				964E8BF228B84A0B00A124C9 /* ViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
