@@ -21,6 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = MainViewController() // 루트 뷰컨트롤러 생성
         window.makeKeyAndVisible()
         
+        ///  Case Coordinator 패턴
+        ///  ```
+        ///  let navVC = UINavigationController()
+        ///  let coordinator = HomeCoordinator(navigationController: navVC)
+        ///  coordinator.start()
+        ///  ```
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
