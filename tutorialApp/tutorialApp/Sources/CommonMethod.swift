@@ -8,21 +8,21 @@
 import UIKit
 
 // MARK: - AlertViewController
-public struct GCAlertViewController {
+public struct RDAlertViewController {
     
     public init() {}
     
-    public func alertControllerShow(WithTitle titl: String, message msg: String, isNeedCancel cancel: Bool, viewController vc: UIViewController, completeHandler complete: @escaping (_ isCheck: Bool) -> Void) -> Void {
+    static public func alertControllerShow(WithTitle titl: String, message msg: String, isNeedCancel cancel: Bool, viewController vc: UIViewController, completeHandler complete: @escaping (_ isCheck: Bool) -> Void) -> Void {
         
         let alertController = UIAlertController.init(title: titl, message: msg, preferredStyle: .alert)
         if cancel {
-            let cancelAction = UIAlertAction.init(title: GCMessage().buttonFalse, style: .cancel) { (cancelAct) in
+            let cancelAction = UIAlertAction.init(title: RDMessage().buttonFalse, style: .cancel) { (cancelAct) in
                 complete(false)
             }
             alertController.addAction(cancelAction)
         }
         
-        let btnAction = UIAlertAction.init(title: GCMessage().buttonTrue, style: .default) { (alertAct) in
+        let btnAction = UIAlertAction.init(title: RDMessage().buttonTrue, style: .default) { (alertAct) in
             complete(true)
         }
         
@@ -35,16 +35,16 @@ public struct GCAlertViewController {
     }
     
     
-    public func alertControllerShowWithTextField(WithPrompt prompt: String?, defaultTxt defaultText: String?, viewController vc: UIViewController, completeHandler: @escaping (_ resultString: String?) -> Void) -> Void {
+    static public func alertControllerShowWithTextField(WithPrompt prompt: String?, defaultTxt defaultText: String?, viewController vc: UIViewController, completeHandler: @escaping (_ resultString: String?) -> Void) -> Void {
         
         let alertController = UIAlertController.init(title: "", message: defaultText, preferredStyle: .alert)
         alertController.addTextField { (txtField) in
             txtField.text = defaultText
         }
-        let cancelAction = UIAlertAction.init(title: GCMessage().buttonFalse, style: .cancel) { (canceled) in
+        let cancelAction = UIAlertAction.init(title: RDMessage().buttonFalse, style: .cancel) { (canceled) in
             completeHandler(nil)
         }
-        let defaultAction = UIAlertAction.init(title: GCMessage().buttonTrue, style: .default) { (defaultAciton) in
+        let defaultAction = UIAlertAction.init(title: RDMessage().buttonTrue, style: .default) { (defaultAciton) in
             let textFt = alertController.textFields?.first?.text
             completeHandler(textFt)
             
@@ -59,17 +59,17 @@ public struct GCAlertViewController {
     }
     
     
-    public func basicAlertControllerShow(WithTitle titl: String, message msg: String, isNeedCancel cancel: Bool, viewController vc: UIViewController, completeHandler complete: @escaping (_ isCheck: Bool) -> Void) -> Void {
+    static public func basicAlertControllerShow(WithTitle titl: String, message msg: String, isNeedCancel cancel: Bool, viewController vc: UIViewController, completeHandler complete: @escaping (_ isCheck: Bool) -> Void) -> Void {
         
         let alertController = UIAlertController.init(title: titl, message: msg, preferredStyle: .alert)
         if cancel {
-            let cancelAction = UIAlertAction.init(title: GCMessage().buttonFalse, style: .cancel) { (cancelAct) in
+            let cancelAction = UIAlertAction.init(title: RDMessage().buttonFalse, style: .cancel) { (cancelAct) in
                 complete(false)
             }
             alertController.addAction(cancelAction)
         }
         
-        let btnAction = UIAlertAction.init(title: GCMessage().buttonTrue, style: .default) { (alertAct) in
+        let btnAction = UIAlertAction.init(title: RDMessage().buttonTrue, style: .default) { (alertAct) in
             complete(true)
         }
         

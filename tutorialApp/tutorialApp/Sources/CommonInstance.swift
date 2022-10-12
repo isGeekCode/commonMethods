@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class GCMessage {
+open class RDMessage {
     
     public init() {}
     
