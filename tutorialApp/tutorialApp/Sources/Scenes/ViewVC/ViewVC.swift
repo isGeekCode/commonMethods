@@ -68,8 +68,25 @@ class ViewViewController: BaseViewController {
     
     @objc func closeBtnTapped(_ sender: UIButton) {
         print("closeBtn")
-        dismiss(animated: true, completion: nil)
+        
+        if let topVC = UIApplication.topViewController() {
+            RDAlertViewController.alertControllerShow(WithTitle: "", message: "helloWorld", isNeedCancel: false, viewController: topVC) { isCheck in
+                self.bView.backgroundColor = .systemTeal
+            }
+        }
+//        dismiss(animated: true, completion: nil)
     }
-
 }
 
+// 클래스 외부에 선언
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct ViewVCPreview: PreviewProvider {
+    
+    static var previews: some View {
+        ViewViewController().toPreview()
+
+    }
+}
+#endif
