@@ -10,61 +10,61 @@ import Foundation
 
 // MARK: - 1. 서브클래스의 미리보기를 보여주는 컨벤션을 가진 클래스 구현
 
-/*
- import UIKit
- import SwiftUI
- 
- #if DEBUG
- extension UIViewController {
- private struct Preview: UIViewControllerRepresentable {
- let viewController: UIViewController
- 
- func makeUIViewController(context: Context) -> UIViewController {
- return viewController
- }
- 
- func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
- }
- }
- 
- func toPreview() -> some View {
- Preview(viewController: self)
- }
- }
- 
- extension UIView {
- private struct Preview: UIViewRepresentable {
- typealias UIViewType = UIView
- let view: UIView
- 
- func makeUIView(context: Context) -> UIView {
- return view
- }
- 
- func updateUIView(_ uiView: UIView, context: Context) {
- }
- }
- 
- func toPreview() -> some View {
- Preview(view: self)
- }
- }
- #endif
- */
 
-// MARK: - 2. 미리보기할 View의 하단에 구현할 코드
-
-/*
-#if canImport(SwiftUI) && DEBUG
+import UIKit
 import SwiftUI
 
-struct <# ViewController #>Preview: PreviewProvider {
+#if DEBUG
+extension UIViewController {
+    private struct Preview: UIViewControllerRepresentable {
+        let viewController: UIViewController
+        
+        func makeUIViewController(context: Context) -> UIViewController {
+            return viewController
+        }
+        
+        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        }
+    }
     
-    static var previews: some View {
-        <# ViewController #>().toPreview()
+    func toPreview() -> some View {
+        Preview(viewController: self)
+    }
+}
+
+extension UIView {
+    private struct Preview: UIViewRepresentable {
+        typealias UIViewType = UIView
+        let view: UIView
+        
+        func makeUIView(context: Context) -> UIView {
+            return view
+        }
+        
+        func updateUIView(_ uiView: UIView, context: Context) {
+        }
+    }
+    
+    func toPreview() -> some View {
+        Preview(view: self)
     }
 }
 #endif
+
+
+// MARK: - 2. 미리보기할 View의 하단에 구현할 코드
+
+
+ #if canImport(SwiftUI) && DEBUG
+ import SwiftUI
+ 
+ struct <# ViewController #>Preview: PreviewProvider {
+ 
+ static var previews: some View {
+ <# ViewController #>().toPreview()
+ }
+ }
+ #endif
  */
 
 
@@ -92,25 +92,25 @@ struct <# ViewController #>Preview: PreviewProvider {
 ///
 /*
  private var testLabel: UILabel = UILabel()
-
-
+ 
+ 
  [ closeButton, testLabel ].forEach {
-     bView.addSubview($0)
+ bView.addSubview($0)
  }
-
+ 
  testLabel.snp.makeConstraints {
-     $0.width.equalTo(bView).multipliedBy(0.2)
-     $0.height.equalTo(bView.snp.width).multipliedBy(0.1)
-     $0.centerX.equalToSuperview()
-     $0.top.equalToSuperview().inset(100)
+ $0.width.equalTo(bView).multipliedBy(0.2)
+ $0.height.equalTo(bView.snp.width).multipliedBy(0.1)
+ $0.centerX.equalToSuperview()
+ $0.top.equalToSuperview().inset(100)
  }
-
+ 
  
  testLabel.backgroundColor = .systemPink
  testLabel.text = "test"
-// testLabel.textAlignment = .center
-// testLabel.textColor = .white
-
+ // testLabel.textAlignment = .center
+ // testLabel.textColor = .white
+ 
  */
 
 
@@ -119,22 +119,22 @@ struct <# ViewController #>Preview: PreviewProvider {
 /*
  
  private var testButton: UIButton = UIButton()
-
-  [ closeButton, testLabel, testButton ].forEach {
+ 
+ [ closeButton, testLabel, testButton ].forEach {
  bView.addSubview($0)
-}
-   testButton.snp.makeConstraints {
-     $0.centerX.equalToSuperview()
-     $0.top.equalTo(testLabel.snp.bottom).offset(30)
-     $0.width.height.equalTo(testLabel)
+ }
+ testButton.snp.makeConstraints {
+ $0.centerX.equalToSuperview()
+ $0.top.equalTo(testLabel.snp.bottom).offset(30)
+ $0.width.height.equalTo(testLabel)
  }
  
  testButton.backgroundColor = .systemBlue
-//        testButton.setTitle("testBtn", for: .normal)
-
+ //        testButton.setTitle("testBtn", for: .normal)
+ 
  
  @objc func buttonBtnTapped(_ sender: UIButton) {
-     print("ButtonVcBtn")
+ print("ButtonVcBtn")
  }
  
  */
@@ -143,14 +143,14 @@ struct <# ViewController #>Preview: PreviewProvider {
 /*
  
  private var testSwitch: UISwitch = UISwitch()
-
+ 
  [ closeButton, testLabel, testButton, testSwitch ].forEach {
  bView.addSubview($0)
-}
+ }
  testSwitch.snp.makeConstraints {
-     $0.centerX.equalToSuperview()
-     $0.top.equalTo(testButton.snp.bottom).offset(30)
-     $0.width.height.equalTo(testButton)
+ $0.centerX.equalToSuperview()
+ $0.top.equalTo(testButton.snp.bottom).offset(30)
+ $0.width.height.equalTo(testButton)
  }
  
  testSwitch.thumbTintColor = UIColor.systemTeal
@@ -161,11 +161,11 @@ struct <# ViewController #>Preview: PreviewProvider {
 // 동작을 확인하기 위해서는 시뮬레이터 상단의 PLAY버튼을 활성화 시킨다.
 /// 클릭하면 얼럿생성, 확인을 누르면 색상이 바뀜
 /*
-    if let topVC = UIApplication.topViewController() {
-        RDAlertViewController.alertControllerShow(WithTitle: "", message: "helloWorld", isNeedCancel: false, viewController: topVC) { isCheck in
-    //        self.bView.backgroundColor = .systemTeal
-        }
-    }
+ if let topVC = UIApplication.topViewController() {
+ RDAlertViewController.alertControllerShow(WithTitle: "", message: "helloWorld", isNeedCancel: false, viewController: topVC) { isCheck in
+ //        self.bView.backgroundColor = .systemTeal
+ }
+ }
  */
 
 // MARK: - TEST 3. presentVC
